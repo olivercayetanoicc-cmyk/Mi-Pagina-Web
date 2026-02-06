@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SPA Relax</title>
+<link rel="stylesheet" href="estilospagina.css">
+</head>
+
+<body>
+
+<div class="app-container">
+
+<header class="app-header">
+    <span class="menu-btn" onclick="toggleMenu()">☰</span>
+    <h1>SPA Relax</h1>
+</header>
+
+<nav class="app-menu" id="menu">
+    <a onclick="mostrarSeccion('login')">🔐 Inicio de sesión</a>
+    <a onclick="mostrarSeccion('generales')">🌿 Generales</a>
+    <a onclick="mostrarSeccion('galeria')">🖼️ Galería</a>
+    <a onclick="mostrarSeccion('contacto')">📩 Contáctanos</a>
+    <a onclick="mostrarSeccion('ubicacion')">📍 Ubicación</a>
+</nav>
+
+<main class="app-content">
+
+<div id="login" class="section active">
+    <div class="card">
+        <div class="login-header">
+            <h3>Inicia sesión en SPA Relax</h3>
+            <p>Accede a tu cuenta para reservar y gestionar tus sesiones</p>
+        </div>
+        <input type="text" placeholder="Usuario o correo electrónico">
+        <input type="password" placeholder="Contraseña">
+        <button>Ingresar</button>
+        <div class="login-social">
+            <button style="background:#3b5998;">Facebook</button>
+            <button style="background:#db4437;">Google</button>
+        </div>
+        <div class="login-footer">
+            <p>¿Olvidaste tu <a href="#">contraseña</a>?</p>
+            <p>¿No tienes cuenta? <a href="#">Regístrate aquí</a></p>
+        </div>
+    </div>
+</div>
+
+<div id="generales" class="section">
+    <div class="card">
+        <h2>Sobre nuestro SPA</h2>
+        <p>
+            Bienvenido a <strong>SPA Relax</strong>, un refugio de tranquilidad y bienestar diseñado para rejuvenecer cuerpo, mente y espíritu.
+        </p>
+        <ul style="list-style: none; padding-left: 0;">
+            <li>🌿 <strong>Masajes terapéuticos:</strong> Relajantes y descontracturantes adaptados a tus necesidades.</li>
+            <li>💆‍♀️ <strong>Tratamientos faciales:</strong> Limpieza profunda, hidratación y rejuvenecimiento de la piel.</li>
+            <li>🛁 <strong>Experiencias corporales:</strong> Aromaterapia, exfoliaciones y envolturas para un cuidado total.</li>
+            <li>🧘‍♂️ <strong>Espacio zen:</strong> Ambientes cuidadosamente diseñados para la relajación y meditación.</li>
+        </ul>
+        <p style="text-align:center; margin-top:15px;">
+            <button>Reserva tu cita</button>
+        </p>
+    </div>
+</div>
+
+<div id="galeria" class="section">
+    <div class="card">
+        <h2>Galería</h2>
+        <div class="galeria">
+            <div class="img-container">
+                <img src="spa1.jpg" alt="Masajes relajantes">
+                <div class="caption">Masajes relajantes</div>
+            </div>
+            <div class="img-container">
+                <img src="spa2.jpg" alt="Tratamientos faciales">
+                <div class="caption">Tratamientos faciales</div>
+            </div>
+            <div class="img-container">
+                <img src="spa3.jpg" alt="Espacio zen">
+                <div class="caption">Espacio zen</div>
+            </div>
+            <div class="img-container">
+                <img src="spa4.jpg" alt="Aromaterapia">
+                <div class="caption">Aromaterapia</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="contacto" class="section">
+    <div class="card">
+        <h2>Contáctanos</h2>
+        <div class="contact-info">
+            <p><span>Teléfono:</span> +52 55 1234 5678</p>
+            <p><span>Correo:</span> contacto@sparrelax.com</p>
+            <p><span>Horario:</span> Lun-Sáb 9:00 - 19:00</p>
+        </div>
+        <input type="text" placeholder="Nombre completo">
+        <input type="email" placeholder="Correo electrónico">
+        <input type="tel" placeholder="Teléfono">
+        <textarea rows="4" placeholder="Escribe tu mensaje"></textarea>
+        <button>Enviar mensaje</button>
+        <button class="secondary" onclick="limpiarFormulario()">Limpiar</button>
+    </div>
+</div>
+
+<div id="ubicacion" class="section">
+    <div class="card">
+        <h2>Ubicación</h2>
+        <div class="location-card">
+            <p>📍 <span>Dirección:</span> Av. Principal 123, Ciudad SPA</p>
+            <p>📞 <span>Teléfono:</span> +52 55 1234 5678</p>
+            <p>✉️ <span>Correo:</span> contacto@sparrelax.com</p>
+            <p>⏰ <span>Horario:</span> Lun-Sáb 9:00 - 19:00</p>
+        </div>
+        <div class="mapa">
+            <iframe src="https://www.google.com/maps/embed"></iframe>
+        </div>
+        <p style="text-align:center; margin-top:15px;">
+            <a href="https://www.google.com/maps" target="_blank">Ver en Google Maps</a>
+        </p>
+    </div>
+</div>
+
+<div class="footer">
+    © 2026 SPA Relax · Todos los derechos reservados
+</div>
+
+</main>
+</div>
+
+<div class="overlay" id="overlay" onclick="cerrarMenu()"></div>
+
+<script src="funciones.js"></script>
+</body>
+</html>
